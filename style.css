@@ -394,12 +394,6 @@ footer {
     display: none;
 }
 
-/* hide label of slider */
-
-.slider-label {
-    display: none;
-}
-
 /* Desktop styles */
 
 @media (min-width: 37.5rem) {
