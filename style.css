@@ -63,7 +63,7 @@ svg {
 body {
     font-family: 'Manrope', sans-serif;
     min-height: 100dvh;
-    background: var(--color-neutral-very-pale-blue) url('/images/bg-pattern.svg');
+    background: var(--color-neutral-very-pale-blue) url('./images/bg-pattern.svg');
     background-repeat: no-repeat;
     /* Extend background image for bigger viewport */
     background-size: contain;
@@ -80,7 +80,7 @@ body {
 
 @media (max-width: 1200px) {
     body {
-        background: var(--color-neutral-very-pale-blue) url('/images/bg-pattern.svg');
+        background: var(--color-neutral-very-pale-blue) url('./images/bg-pattern.svg');
         background-repeat: no-repeat;
     }
 }
@@ -179,7 +179,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 2.5rem;
     border-radius: 50%;
     border: none;
-    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background: var(--color-primary-strong-cyan) url(./images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
@@ -192,7 +192,7 @@ input[type=range]::-moz-range-thumb {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
-    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background: var(--color-primary-strong-cyan) url(./images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: center;
     border: none;
@@ -205,7 +205,7 @@ input[type=range]::-ms-thumb {
     width: 2.5rem;
     border-radius: 50%;
     border: none;
-    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background: var(--color-primary-strong-cyan) url(./images/icon-slider.svg);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
