@@ -1,0 +1,501 @@
+:root {
+
+    /*** PRIMARY COLORS ***/
+    /* Slider bar color */
+    --color-primary-soft-cyan: hsl(174, 77%, 80%);
+    /* slider background */
+    --color-primary-strong-cyan: hsl(174, 86%, 45%);
+    /* discount background */
+    --color-primary-light-grayish-red: hsl(14, 92%, 95%);
+    /* discount text */
+    --color-primary-light-red: hsl(15, 100%, 70%);
+    /* cta text */
+    --color-primary-pale-blue: hsl(226, 100%, 87%);
+
+    /*** NEUTRAL COLORS ***/
+    --color-neutral-white: hsl(0, 0%, 100%);
+    /* main background */
+    --color-neutral-very-pale-blue: hsl(230, 100%, 99%);
+    /* empty slider bar */
+    --color-neutral-light-grayish-blue-1: hsl(224, 65%, 95%);
+    /* toggle background */
+    --color-neutral-light-grayish-blue-2: hsl(223, 50%, 87%);
+    /* text color */
+    --color-neutral-grayish-blue: hsl(225, 20%, 60%);
+    /* text & cta background */
+    --color-neutral-dark-desaturated-blue: hsl(227, 35%, 25%);
+}
+
+/* css resets start */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.desktop-visible {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* css resets ends */
+
+body {
+    font-family: 'Manrope', sans-serif;
+    min-height: 100dvh;
+    background: var(--color-neutral-very-pale-blue) url('/images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    /* Extend background image for bigger viewport */
+    background-size: contain;
+    color: var(--color-neutral-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.94rem;
+}
+
+
+/* Stop background image from shrinking on smaller viewport width */
+
+@media (max-width: 1200px) {
+    body {
+        background: var(--color-neutral-very-pale-blue) url('/images/bg-pattern.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+/* Heading container start */
+
+.heading-container {
+    position: relative;
+    padding: 2rem 0;
+    margin: 1rem 0 2.5rem 0;
+}
+
+.heading-container h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+    color: var(--color-neutral-dark-desaturated-blue);
+}
+
+.heading-container p {
+    font-size: 0.8rem;
+}
+
+.heading-container img {
+    position: absolute;
+    top: 0;
+    left: 28%;
+}
+
+/* Heading container stop */
+
+/* Main app styles below */
+
+.app {
+    background-color: var(--color-neutral-white);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    width: 20.5rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0px 10px 15px 5px hsla(227, 25%, 25%, 0.1);
+}
+
+/* pricing section styles */
+
+.pricing-section {
+    display: grid;
+    gap: 2rem;
+}
+
+.pricing-section>p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.85rem;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.price {
+    color: var(--color-neutral-dark-desaturated-blue);
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+/*** Design for input range track and thumb starts ***/
+
+/* Slider reset for all browsers */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+/*** Styling Thumb ***/
+
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-top: -14px;
+    box-shadow: 0px 10px 15px 5px hsl(174, 86%, 45%, 0.4);
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 10px 15px 5px hsl(174, 86%, 45%, 0.4);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 0px 10px 15px 5px hsl(174, 86%, 45%, 0.4);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-primary-strong-cyan) url(/images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+/*** Styling Track ***/
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: var(--color-neutral-light-grayish-blue-1);
+    border-radius: 50vh;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: var(--color-neutral-light-grayish-blue-1);
+    border-radius: 50vh;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+}
+
+
+input[type="range"]::-moz-range-progress {
+    background-color: var(--color-primary-soft-cyan);
+    height: 0.5rem;
+    border-radius: 50vh;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: var(--color-primary-soft-cyan);
+    border-radius: 50vh;
+    height: 0.5rem;
+}
+
+input[type=range]::-webkit-slider-progress,
+input[type=range]::-webkit-slider-runnable-progress {
+    background: var(--color-primary-soft-cyan);
+    border-radius: 50vh;
+    height: 0.5rem;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: var(--color-primary-soft-cyan);
+    height: 0.5rem;
+}
+
+/*** Design for input range track and thumb ends ***/
+
+
+/* toggle section styles */
+
+.toggle-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.75rem;
+    margin: 2rem -0.6rem 2.5rem 0;
+    gap: 0.7rem;
+}
+
+.discount span {
+    background-color: var(--color-primary-light-grayish-red);
+    color: var(--color-primary-light-red);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 50vh;
+    margin-left: 0.3rem;
+}
+
+/*** Toggle styles start ***/
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.625rem;
+    height: 1.375rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50vh;
+    background-color: var(--color-neutral-light-grayish-blue-2);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:hover {
+    background-color: var(--color-primary-soft-cyan);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3.5px;
+    border-radius: 50%;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color-primary-strong-cyan);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--color-primary-strong-cyan);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+}
+
+/*** Toggle styles stop ***/
+
+/* horizontal line styles */
+
+.hr-line {
+    width: 120%;
+    height: 1px;
+    background-color: var(--color-neutral-light-grayish-blue-1);
+    margin-left: -1.5rem;
+    align-self: center;
+}
+
+/* Bottom cta action with benefits */
+
+.cta-section {
+    padding: 1.5rem 0 0.5rem 0;
+    font-size: 0.75rem;
+}
+
+.cta-section>div {
+    margin-bottom: 2rem;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+#cta {
+    background-color: var(--color-neutral-dark-desaturated-blue);
+    color: var(--color-primary-pale-blue);
+    border: none;
+    border-radius: 50vh;
+    padding: 0.8rem 3rem;
+}
+
+#cta:hover {
+    color: var(--color-neutral-white);
+    cursor: pointer;
+}
+
+footer {
+    display: none;
+}
+
+/* Desktop styles */
+
+@media (min-width: 37.5rem) {
+
+    .desktop-visible {
+        display: block;
+    }
+
+    .mobile-visible {
+        display: none;
+    }
+
+    main {
+        margin-bottom: 2rem;
+    }
+
+    .heading-container {
+        margin: 0 0 4rem 0;
+    }
+
+    .heading-container h1 {
+        font-size: 1.75rem;
+    }
+
+    .heading-container p {
+        font-size: 0.94rem;
+    }
+
+    .heading-container img {
+        left: 36%;
+    }
+
+    .app {
+        width: 33.75rem;
+        text-align: left;
+        padding: 2.5rem 2.8rem 2rem 2.8rem;
+    }
+
+    .pricing-section {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            ". ."
+            "↔️ ↔️";
+    }
+
+    input[type=range] {
+        grid-area: ↔️;
+    }
+
+    .pricing-section>p:nth-child(1) {
+        align-self: center;
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 2.4rem;
+    }
+
+    .toggle-section {
+        justify-content: center;
+        margin-right: -6rem;
+        margin-top: 2.9rem;
+    }
+
+    .hr-line {
+        margin-left: -2.85rem;
+    }
+
+    .cta-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 0 0 0;
+    }
+
+    .cta-section>div {
+        margin-bottom: 0;
+    }
+
+    .benefit {
+        justify-content: flex-start;
+    }
+
+    .benefit:last-child {
+        margin-bottom: 0;
+    }
+
+    /* footer or attribution */
+
+    footer {
+        display: block;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 2px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: var(--color-neutral-dark-desaturated-blue);
+    }
+
+}

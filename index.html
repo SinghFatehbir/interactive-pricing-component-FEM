@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/script.js" defer></script>
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+
+<body>
+  <main>
+
+    <!-- Heading section -->
+
+    <div class="heading-container">
+      <h1>Simple, traffic-based pricing</h1>
+      <p class="mobile-visible">Sign-up for our 30-day trial.
+        <br>No credit card required.
+      </p>
+      <p class="desktop-visible">Sign-up for our 30-day trial.No credit card required.
+      </p>
+      <img src="./images/pattern-circles.svg" alt="pattern svg">
+    </div>
+
+    <!-- app section -->
+
+    <article class="app">
+      <div class="pricing-section">
+        <p><span class="view-number">100k</span> pageviews</p>
+        <input name="price-slider" id="price-slider" type="range" min="1" max="5" step="1" value="3" />
+        <div class="price-container">
+          <p class="price">$16.00</p>
+          <p class="month-year"> / month</p>
+        </div>
+      </div>
+      <div class="toggle-section">
+        <p class="monthly">Monthly Billing</p>
+        <label class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="slider"></span>
+        </label>
+        <p class="yearly desktop-visible discount">Yearly Billing<span>-25% discount</span></p>
+        <p class="yearly mobile-visible discount">Yearly Billing<span>-25%</span></p>
+      </div>
+      <div class="hr-line"></div>
+      <div class="cta-section">
+        <div>
+          <div class="benefit">
+            <img src="./images/icon-check.svg" alt="icon checkmark">
+            <p>Unlimited websites</p>
+          </div>
+          <div class="benefit">
+            <img src="./images/icon-check.svg" alt="icon checkmark">
+            <p>100% data ownership</p>
+          </div>
+          <div class="benefit">
+            <img src="./images/icon-check.svg" alt="icon checkmark">
+            <p>Email reports</p>
+          </div>
+        </div>
+        <button type="button" id="cta">Start my trial</button>
+      </div>
+    </article>
+
+
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.frontendmentor.io/profile/fa7eh">Fatehbir Singh</a>.
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+
+</html>
